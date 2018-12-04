@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "f86f7913-0959-4289-8516-1b2f59ea183b",
+		"name": "Relationship",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "city",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Pomerode\",\n    \"stateName\": \"SC\",\n    \"countryName\": \"Brasil\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Claudio 2\",\n\t\"city\" : { \"id\" : \"36742301-0b33-4b23-9be0-f439ba9f649c\" },\n\t\"phones\" : [{\n\t\t\"internationalCode\" : \"55\",\n\t\t\"localCode\" : \"47\",\n\t\t\"number\" : \"88507865\"\n\t\t}]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Produto 2\",\n\t\"value\" : 16\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sale",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"client\" : { \"id\" : \"3a584407-f319-46a9-bfc0-53cca574b1af\" },\n\t\"products\" : [{ \"id\" : \"5206f14d-78da-47df-ae93-de81fa1c5065\" }],\n\t\"date\" : \"2018-01-01\",\n\t\"total\" : 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"sale"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
